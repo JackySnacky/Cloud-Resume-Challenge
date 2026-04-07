@@ -23,5 +23,10 @@ def lambda_handler(event, context):
 
     return {
         'statusCode': 200,
+        # Sets headers to allow cross-origin resource sharing (CORS)
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json'
+        },
         'body': json.dumps({'count': count})
     }
