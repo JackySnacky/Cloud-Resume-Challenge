@@ -1,10 +1,9 @@
 import json
 import boto3
 
-dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('visitor-counter')
-
 def lambda_handler(event, context):
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('visitor-counter')
     # Gets the table and update the counter
     response = table.update_item(
         # Updates the item
