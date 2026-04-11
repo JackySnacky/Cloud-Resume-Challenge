@@ -9,10 +9,10 @@ def lambda_handler(event, context):
         # Updates the item
         Key={'id': 'visitors'},
         # Adds one to the count
-        UpdateExpression='ADD #count :increament',
+        UpdateExpression='ADD #count :increment',
         # Maps a placeholder for the real attribute name, count
         ExpressionAttributeNames={'#count': 'count'},
-        ExpressionAttributeValues={':increament': 1},
+        ExpressionAttributeValues={':increment': 1},
         # Updates and gets the value of counter
         ReturnValues="UPDATED_NEW"
     )
