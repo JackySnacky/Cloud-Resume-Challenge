@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      SAM_CLI_TELEMETRY: 0
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -55,4 +56,4 @@ jobs:
       - name: SAM deploy
         run: |
           cd backend
-          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name cloud-resume-backend --region ca-west-1
+          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
