@@ -5,7 +5,6 @@ stack_name = "cloud-resume-backend"
 resolve_s3 = true
 s3_prefix = "cloud-resume-backend"
 region = "ca-west-1"
-profile = "cloud-resume-prod"
 confirm_changeset = true
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
